@@ -33,12 +33,12 @@ ul, ol {
     align-items: center;
     margin-bottom: 4rem;
     font-size: 1.125rem;
+    padding-bottom: 2rem;
 }
 
 .section:first-child {
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 2rem;
 }
 
 
