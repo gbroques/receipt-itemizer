@@ -8,6 +8,12 @@
     src: url('SourceSansPro-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Bold.ttf');
+    font-weight: 700;
+}
+
 
 body {
     font-family: 'Source Sans Pro';
@@ -15,10 +21,11 @@ body {
     font-size: 16px;
     overflow-x: hidden;
     background: #fafafa;
-    color: rgba(0, 0, 0, .8)
+    color: rgba(0, 0, 0, .8);
+    text-align: center;
 }
 
-html, body, p, ul, ol {
+html, body, p, ul, ol, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
 }
@@ -33,13 +40,25 @@ ul, ol {
     align-items: center;
     margin-bottom: 4rem;
     font-size: 1.125rem;
-    padding-bottom: 2rem;
+    padding: 1rem 1rem 2rem;
 }
 
-.section:first-child {
-    flex-direction: row;
-    justify-content: center;
+.introduction {
+    margin-bottom: 1rem;
 }
+
+@media only screen and (min-width: 480px) {
+    .section:first-child {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+    .introduction {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+  }
+
 
 
 .section:first-child {
@@ -69,10 +88,12 @@ ul, ol {
 .section:nth-child(3) {
     color: white;
     background: #b71c1c;
+    background: radial-gradient(circle at center, #e53935, #93291E);
 }
 
-.section:first-child div {
-    margin-right: 1rem;
+.section p {
+    max-width: 660px;
+    margin-bottom: 1.5rem;
 }
 
 .headline {
@@ -86,9 +107,15 @@ ul, ol {
 
 .section-heading {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .image {
     width: 100%;
     height: auto;
+}
+
+.receipt-with-bounding-boxes {
+    max-width: 350px;
+    border-radius: 2px;
 }
