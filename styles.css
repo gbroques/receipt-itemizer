@@ -14,6 +14,9 @@
     font-weight: 700;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Source Sans Pro';
@@ -69,20 +72,6 @@ html, body, p, ul, ol, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
-.section:first-child::after {
-    background: inherit;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 50%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-1.5deg);
-    transform-origin: 100%;
-    z-index: -1;
-  }
-
 .section:nth-child(2n + 3) {
     color: white;
     background: #b71c1c;
@@ -109,5 +98,51 @@ html, body, p, ul, ol, h1, h2, h3, h4, h5, h6 {
 
 .receipt-with-bounding-boxes {
     max-width: 350px;
+    max-height: 350px;
     border-radius: 2px;
+}
+
+.footer {
+    margin: 2rem;
+    font-size: 0.9375rem;
+    color: rgba(0, 0, 0, 0.67);
+}
+
+/**
+ * MailChimp
+ */
+
+#mc-embedded-subscribe-form {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0.5rem;
+}
+
+#mce-EMAIL {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+}
+
+#mce-EMAIL:focus{
+    outline:none;
+    box-shadow: 0 0 4px #e53935;
+}
+
+#mc-embedded-subscribe {
+    width: 100%;
+    background: #e53935;
+    color: white;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background 250ms ease-in-out;
+}
+
+#mc-embedded-subscribe:hover {
+    background: #d32f2f;
 }
